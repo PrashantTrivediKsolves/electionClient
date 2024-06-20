@@ -19,4 +19,13 @@ export class CandidateServiceService {
           }
       });
   }
+  getAllCadidates()
+  {
+    return this.http.get("http://localhost:8001/all_candidate")
+  }
+
+  deleteCandidate(id:any)
+  {
+    return this.http.delete(`http://localhost:8001/candidate/${id}`);
+  }
 }

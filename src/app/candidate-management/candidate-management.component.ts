@@ -1,33 +1,40 @@
 import { Component, OnInit } from '@angular/core';
 import { CandidateServiceService } from '../services/candidate-service.service';
 
+
 @Component({
   selector: 'app-candidate-management',
   templateUrl: './candidate-management.component.html',
   styleUrls: ['./candidate-management.component.css']
 })
 export class CandidateManagementComponent implements OnInit {
-
-  constructor(private candiateservice:CandidateServiceService) { }
-  statusMessage="login";
-
-  ngOnInit(): void {
-  };
-
-  addCandidate(data:any)
+  All_Candidates:any;
+  constructor(private candidateServices:CandidateServiceService)
   {
-    console.log("candiate data");
-    console.log(data);
-    this.candiateservice.addNewCandidate(data);
-    this.candiateservice.status.subscribe((res)=>
-    {
-      this.statusMessage=res;
-      // setTimeout(()=>
-      // {
-      //   this.candiateservice.status.next("");
-      //   this.statusMessage="";
-      // },3000)
-    })
+    this.showAllCandidate();
+  }
+  showAllCandidate()
+  {
+    this.candidateServices.getAllCadidates().subscribe((res)=>
+      {
+        this.All_Candidates=res;
+        console.log(this.All_Candidates);
+      })
   }
 
+  ngOnInit(): void {
+    this.showAllCandidate();
+  };
+  deleteCandidate(id:any)
+  {
+    console.log(id);
+    this.candidateServices.deleteCandidate(id).subscribe((res)=>
+    {
+      if(res)
+        {
+          this.showAllCandidate();
+        }
+    })
+
+  }
 }

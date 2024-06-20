@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { CandidateServiceService } from '../services/candidate-service.service';
 
 @Component({
-  selector: 'app-enroll-candidate',
-  templateUrl: './enroll-candidate.component.html',
-  styleUrls: ['./enroll-candidate.component.css']
+  selector: 'app-update-candidate',
+  templateUrl: './update-candidate.component.html',
+  styleUrls: ['./update-candidate.component.css']
 })
-export class EnrollCandidateComponent implements OnInit {
+export class UpdateCandidateComponent implements OnInit {
 
   constructor(private candiateservice:CandidateServiceService) { }
   statusMessage="login";
@@ -14,7 +14,7 @@ export class EnrollCandidateComponent implements OnInit {
   ngOnInit(): void {
   };
 
-  addCandidate(data:any)
+  updateCandidate(data:any)
   {
     console.log("candiate data");
     console.log(data);
@@ -29,6 +29,4 @@ export class EnrollCandidateComponent implements OnInit {
       // },3000)
     })
   }
-
-
 }

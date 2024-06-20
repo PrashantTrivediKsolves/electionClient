@@ -25,6 +25,7 @@ import { SignupuserComponent } from './signupuser/signupuser.component';
 import { CandidateManagementComponent } from './candidate-management/candidate-management.component';
 import { EnrollCandidateComponent } from './enroll-candidate/enroll-candidate.component';
 import { PollResultComponent } from './poll-result/poll-result.component';
+import { UpdateCandidateComponent } from './update-candidate/update-candidate.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { PollResultComponent } from './poll-result/poll-result.component';
     SignupuserComponent,
     CandidateManagementComponent,
     EnrollCandidateComponent,
-    PollResultComponent
+    PollResultComponent,
+    UpdateCandidateComponent
   ],
   imports: [
     BrowserModule,

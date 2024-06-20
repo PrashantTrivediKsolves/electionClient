@@ -1,51 +1,75 @@
-/* add-candidate.component.css */
-form {
-  max-width: 500px;
-  margin: 50px auto;
+/* General Container Styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.form-label {
-  font-weight: bold;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.col-md-4 {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  padding: 15px;
+}
+
+/* Candidate Card Styles */
+.candidate-card {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 20px;
+}
+
+.candidate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.candidate-img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #dee2e6;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Candidate Name Styles */
+.candidate-name {
+  font-size: 24px;
+  margin: 15px 0;
   color: #333;
 }
 
-.form-control {
-  margin-bottom: 1em;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+/* Candidate Info Styles */
+.candidate-info {
+  background-color: #fff;
+  border-top: 1px solid #dee2e6;
+  padding: 15px;
+  border-radius: 0 0 8px 8px;
 }
 
-.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 4px;
-  cursor: pointer;
+/* Party and Age Styles */
+.candidate-party,
+.candidate-age {
+  font-size: 18px;
+  color: #666;
+  margin: 10px 0;
 }
 
-.btn-primary:hover {
-  background-color: #0056b3;
-  border-color: #004085;
+.candidate-party {
+  color: #007bff;
+  font-weight: bold;
 }
 
-.toast {
-  max-width: 500px;
-  margin: 20px auto;
-  padding: 10px;
-  border-radius: 8px;
-}
-
-.toast-body {
-  font-size: 16px;
-}
-
-.btn-close {
-  cursor: pointer;
+.candidate-age {
+  color: #28a745;
+  font-weight: bold;
 }
