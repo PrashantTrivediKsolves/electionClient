@@ -1,0 +1,24 @@
+<div *ngIf="statusMessage===''" class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="d-flex">
+    <div class="toast-body">
+      {{statusMessage}}
+    </div>
+    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+</div>
+
+<form #formVal="ngForm" (ngSubmit)="addCandidate(formVal.value)">
+  <div class="mb-3">
+    <label for="CandidateName" class="form-label">Enter Candidate Name</label>
+    <input type="text" class="form-control" id="CandidateName" aria-describedby="name" ngModel name="name">
+  </div>
+  <div class="mb-3">
+    <label for="party" class="form-label">Candidate Party</label>
+    <input type="text" class="form-control" id="party" ngModel name="party">
+  </div>
+  <div class="mb-3">
+    <label for="age" class="form-label">Enter the Candidate Age</label>
+    <input type="number" class="form-control" id="age" ngModel name="age">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
