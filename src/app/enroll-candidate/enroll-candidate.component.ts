@@ -19,15 +19,7 @@ export class EnrollCandidateComponent implements OnInit {
     console.log("candiate data");
     console.log(data);
     this.candiateservice.addNewCandidate(data);
-    this.candiateservice.status.subscribe((res)=>
-    {
-      this.statusMessage=res;
-      // setTimeout(()=>
-      // {
-      //   this.candiateservice.status.next("");
-      //   this.statusMessage="";
-      // },3000)
-    })
+
   }
 
 

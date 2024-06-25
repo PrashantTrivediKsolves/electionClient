@@ -21,8 +21,15 @@ import { CandidateManagementComponent } from './candidate-management/candidate-m
 import { EnrollCandidateComponent } from './enroll-candidate/enroll-candidate.component';
 
 import { PollResultComponent } from './poll-result/poll-result.component';
+import { UpdateCandidateComponent } from './update-candidate/update-candidate.component';
+import { VotingLandingPageComponent } from './voting-landing-page/voting-landing-page.component';
+import { VoteNowPageComponent } from './vote-now-page/vote-now-page.component';
 
 const routes: Routes = [
+  {
+    path:"",
+    component:VotingLandingPageComponent
+  },
   {
     path:"home",
     component:HomeComponent
@@ -63,6 +70,14 @@ const routes: Routes = [
   {
     path:"Poll-Result",
     component:PollResultComponent
+  },
+  {
+    path:"Candidate-Management/update-candidate/:id",
+    component:UpdateCandidateComponent
+  },
+  {
+    path:"votenow",
+    component:VoteNowPageComponent
   }
 ];
 @NgModule({

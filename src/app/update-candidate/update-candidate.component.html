@@ -1,19 +1,19 @@
 <form #formVal="ngForm" (ngSubmit)="updateCandidate(formVal.value)">
   <div class="mb-3">
     <label for="CandidateName" class="form-label">Enter Candidate Name</label>
-    <input type="text" class="form-control" id="CandidateName" aria-describedby="name" ngModel name="name">
+    <input type="text" class="form-control" id="CandidateName" aria-describedby="name" ngModel="{{candidate_Data.name}}" name="name" >
   </div>
   <div class="mb-3">
     <label for="CandidateName" class="form-label">Enter Candidate Image URL</label>
-    <input type="text" class="form-control" id="CandidateName" aria-describedby="name" ngModel name="image">
+    <input type="text" class="form-control" id="CandidateName" aria-describedby="name" ngModel="{{candidate_Data.image}}" name="image">
   </div>
   <div class="mb-3">
     <label for="party" class="form-label">Candidate Party</label>
-    <input type="text" class="form-control" id="party" ngModel name="party">
+    <input type="text" class="form-control" id="party" ngModel="{{candidate_Data.party}}" name="party">
   </div>
   <div class="mb-3">
     <label for="age" class="form-label">Enter the Candidate Age</label>
-    <input type="number" class="form-control" id="age" ngModel name="age">
+    <input type="number" class="form-control" id="age" ngModel="{{candidate_Data.age}}" name="age">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
